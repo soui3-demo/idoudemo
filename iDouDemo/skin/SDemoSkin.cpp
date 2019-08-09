@@ -53,7 +53,7 @@ namespace SOUI
 		m_pImg = NULL;
 	}
 
-	SIZE SDemoSkin::GetSkinSize()
+	SIZE SDemoSkin::GetSkinSize()const
 	{		
 		SIZE ret = { 0, 0 };
 		if (m_pImg)
@@ -120,11 +120,18 @@ namespace SOUI
 		m_ISetOrLoadSkinHandler = skinhander;
 	}
 
-	void SDemoSkin::_Draw(IRenderTarget * pRT, LPCRECT rcDraw, DWORD dwState, BYTE byAlpha)
+	void SDemoSkin::_DrawByIndex(IRenderTarget* pRT, LPCRECT rcDraw, int iState, BYTE byAlpha) const
 	{
 		if (m_bIsColor)
-		{			
-			COLORREF bkColor = m_bkColor | (byAlpha << 24);
+		{
+			COLORREF bkColor;
+			//设置了皮肤透明度则使用皮肤的透明度
+			if (byAlpha != 0xFF)
+			{
+				bkColor = m_bkColor & ((byAlpha << 24)|0xffffff);
+			}
+			else
+				bkColor = m_bkColor | (byAlpha << 24);
 			pRT->FillSolidRect(rcDraw, bkColor);
 		}
 		else if (m_pImg)

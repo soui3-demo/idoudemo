@@ -5,11 +5,16 @@
       <text text="{{title}}"/>
       <text name="{{name}}" class="info_lable_item"/>
     </window>
-  </info_item>
+  </info_item>  
   <dsk_info>
     <window size="-1,-1" weight="1" layout="hbox" gravity="center" interval="6">
       <window size="10,10" colorBkgnd="{{colorBkgnd}}"/>
       <text text="{{title}}"/>
     </window>
   </dsk_info>
+  <skin_item>
+    <window id="{{id}}" class="skin_wnd" colorBkgnd="{{colorBkgnd}}">
+      <img name="check" pos="|,|" skin="skin_check" offset="-0.5,-0.5" visible="0" iconIndex="1"/>
+    </window>
+  </skin_item>
 </template>

@@ -1,0 +1,63 @@
+﻿<include>
+  <window size="-2,36" name="wnd_file_uri">
+    <button size="36,-2" name="btn_goback" text="&lt;" enable="0"/>
+    <button size="36,-2" name="btn_goforward" text="&gt;" enable="0"/>
+    <edit name="et_path" size="-2,-2" autoSel="0" readOnly="1"/>
+  </window>
+  <hr size="-2,1" colorLine="@color/gray4"/>
+  <window size="-2,0" weight="1" layout="hbox">
+    <treeview name="tv_files_mgr" size="166,-2" indent="0">
+      <template>
+        <item_group focusable="0" layout="vbox" size="-2,36"  colorHover="@color/gray3">
+          <window size="-2,0" layout="hbox" weight="1" gravity="center">
+            <text extend_left="12" weight="1" size="0,-2" name="Name" text="iPhone 11"/>
+            <animateimg skin="skin_loading" display="0" name="img_loading" visible="0"/>
+          </window>
+          <hr size="-2,1" colorLine="@color/gray4"/>
+        </item_group>
+        <item_data size="-2,36" colorHover="@color/gray3" colorSelected="#c9c7c6">
+          <window name="bkwnd" size="-2,-2" layout="hbox" gravity="center" alpha="128">
+            <img extend_left="12" size="12,12" name="face"/>
+            <text extend_left="12" name="Name" text="寶寶"/>
+          </window>
+        </item_data>
+      </template>
+    </treeview>
+    <hr size="1,-2" colorLine="@color/gray4" mode="vertical"/>
+    <window size="0,-2" weight="1" layout="vbox">
+      <window size="-2,52" layout="hbox" gravity="center" interval="8" colorBkgnd="@color/white">
+        <button inset="12,4,12,4" name="btn_installapp" text="新建文件夹"/>
+        <button inset="12,4,12,4" name="btn_uninstallapp" text="导入"/>
+        <button inset="12,4,12,4" name="btn_refershapp" text="导出"/>
+        <button inset="12,4,12,4" name="btn_refershapp" text="删除"/>
+        <button inset="12,4,12,4" name="btn_refershapp" text="刷新"/>
+      </window>
+      <hr size="-2,1" colorLine="@color/gray4"/>
+      <mclistviewex name="lv_filesList" canSwapItem="0" headerHeight="26" colorDropBk="#0064b3" colorBkgnd="@color/white" size="-2,0" weight="1">
+        <header2 name="apps_header" align="center" matchParent="1" itemSkin="" minWidth="38" cursor="hand" itemSwapEnable="0" sortHeader="0" colorText="#000000ff" margin="0,0,0,1" colorBorder="@color/gray3">
+          <items>
+            <item width="150">名称</item>
+            <item width="66">大小</item>
+            <item width="88">类型</item>
+            <item width="88">时间</item>
+          </items>
+        </header2>
+        <template itemHeight="38" colorHover="@color/item_hov" colorSelected="@color/item_sel">
+          <window name="name" clipClient="1" layout="hbox" gravity="center" interval="4">
+            <icon size="16,16" name="img_fileIcon" extend_left="4"/>
+            <text name="lable_path" size="0,-1" weight="1" dotted="1" />
+          </window>
+          <window name="size" clipClient="1">
+            <text name="lable_size" pos="|,|" offset="-0.5,-0.5"></text>
+          </window>
+          <window name="type" clipClient="1">
+            <text name="lable_type" pos="|,|" offset="-0.5,-0.5" ></text>
+          </window>
+          <window name="time" clipClient="1">
+            <text name="lable_time" pos="|,|" offset="-0.5,-0.5"></text>
+          </window>
+        </template>
+      </mclistviewex>
+    </window>
+  </window>
+</include>

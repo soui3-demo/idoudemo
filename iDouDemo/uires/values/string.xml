@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
   <string>
-    <title value="爱豆助手"/>
+    <title value="易点助手"/>
     <ver value="1.0"/>
+    <abouttitle value="关于软件"/>
     <waitpair value="等待设备配对..."/>
     <cmd1 value="设备信息"/>
-    <cmd2 value="待定..."/>
-    <cmd3 value="待定..."/>
-    <cmd4 value="待定..."/>
-    <cmd5 value="待定..."/>
+    <cmd2 value="应用游戏"/>
+    <cmd3 value="文件管理"/>
+    <cmd4 value="通讯录管理"/>
+    <cmd5 value="备份还原"/>
     <noname value="无法获取设备名"/>
     <FirmwareVersion value="固件版本"/>
     <SerialNumber value="序列号"/>
@@ -16,6 +17,8 @@
     <BluetoothAddress value="蓝牙地址"/>
     <HardwareModel value="硬件模型"/>
     <IMEI value="设备串号"/>
+    <ECID value="ECID"/>
+    <IsJailreak value="是否越狱"/>
     <ActivationState value="激活状态"/>
     <ProductType value="产品类型"/>
     <ShowDevCheck value="查看验机报告"/>
@@ -23,10 +26,25 @@
     <DevInfo value="设备祥情"/>
     <cantread value="无"/>
     <CycleCount value="充电次数"/>
+    <DiskType value="硬盘类型"/>
+    <iCloud value="iCloud"/>
+    <AppleIDLock value="Apple ID锁"/>
+    <ProductDate value="生产日期"/>
+    <WARRANTYEXPIRATIONDATE value="保修日期"/>
+    <checkcoverage value="在线查询"/>
+    <LOC value="销售地区"/>
+    <CPU value="CPU"/>
     <CycleLife value="电池寿命"/>
     <ActuallyCapacity value="实际容量"/>
     <DesignCapacity value="设计容量"/>
-    <BattaryInfo value="电池祥情"/>
+    <BatteryDate value="生产日期"/>
+    <BattaryInfo value="电池详情"/>
+    <BatterySerialNumber value="序列号"/>
+    <BatteryTemperature value="电池温度"/>
+    <BatteryCurrentCapacity value="电流"/>
+    <BatteryOrigin value="生产厂商"/>
+    <BatteryVoltage value="当前电压"/>
+    <BatteryBootVoltage value="开机电压"/>
     <system value="系统"/>
     <app value="应用"/>
     <photo value="照片"/>
@@ -34,4 +52,9 @@
     <udisk value="U盘"/>
     <other value="其它"/>
     <free value="剩余"/>
+    <charging value="正在充电"/>
+    <nocharging value="不在充电"/>
+    <loadtitle value="加载文件"/>
+    <loadding value="正在加载文件，请稍后..."/>
+    <DevName value="设备名"/>
   </string>

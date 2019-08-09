@@ -3,21 +3,31 @@
     <page>
       <window size="-2,-2" layout="hbox">
         <treeview size="190,-2" name="tv_ios" indent="0">
-          <template >
-            <item_group focusable="0" layout="vbox" size="-2,36"  colorHover="@color/gray3" colorSelected="#c9c7c6">
-              <text extend_left="12" weight="1" size="-2,0" align="bottom" name="Name" text="iPhone 11"/>
+          <template>
+            <item_group focusable="0" layout="vbox" size="-2,36"  colorHover="@color/gray3">
+              <window size="-2,0" layout="hbox" weight="1" gravity="center">
+                <text extend_left="12" weight="1" size="0,-2" name="Name" text="iPhone 11"/>
+                <animateimg skin="skin_loading" display="0" name="img_loading" visible="0"/>
+              </window>
               <hr size="-2,1" colorLine="@color/gray4"/>
             </item_group>
-            <item_firstdata size="-2,43" colorHover="@color/gray3" margin="0,7,0,0" colorSelected="#c9c7c6">
-              <window name="bkwnd" size="-2,-2" layout="hbox" gravity="center" alpha="128">
-                <img extend_left="12" size="12,12" name="face"/>
+            <item_firstdata size="-2,43" colorHover="@color/gray3" margin="0,7,0,0" colorSelected="#ff0000">
+              <window name="bkwnd" size="-2,-2" layout="hbox" gravity="center">
+                <img extend_left="12" name="face" skin="skin_cmdicons"/>
                 <text extend_left="12" name="Name" text="寶寶"/>
               </window>
             </item_firstdata>
+            <item_appdata size="-2,36" colorHover="@color/gray3" colorSelected="#c9c7c6">
+              <window name="bkwnd" size="-2,-2" layout="hbox" gravity="center">
+                <img extend_left="12" name="face"  skin="skin_cmdicons"/>
+                <text extend_left="12" name="Name" weight="1" text="寶寶"/>
+                <animateimg skin="skin_loading" display="0" name="img_loading" visible="0"/>
+              </window>
+            </item_appdata>
             <item_data size="-2,36" colorHover="@color/gray3" colorSelected="#c9c7c6">
-              <window name="bkwnd" size="-2,-2" layout="hbox" gravity="center" alpha="128">
-              <img extend_left="12" size="12,12" name="face"/>
-              <text extend_left="12" name="Name" text="寶寶"/>
+              <window name="bkwnd" size="-2,-2" layout="hbox" gravity="center">
+                <img extend_left="12" name="face" skin="skin_cmdicons"/>
+                <text extend_left="12" name="Name" text="寶寶"/>
               </window>
             </item_data>
           </template>
@@ -27,20 +37,20 @@
           <pageTemplate>
             <page>
               <tabctrl size="-2,-2" name="tab_dev_cmd" tabHeight="0" curSel="0">
-                <page size="-2,-2">
+                <page>
                   <include src="layout:XML_MyDevice_Info"/>
                 </page>
-                <page layout="hbox" gravity="center">
-                  <text text="cmd2"/>
+                <page layout="hbox">
+                  <include src="layout:XML_App_Info"/>
+                </page>
+                <page layout="vbox" colorBkgnd="@color/white">
+                  <include src="layout:XML_FileMgr"/>
                 </page>
                 <page layout="hbox" gravity="center">
-                  <text text="cmd3"/>
+                  <include src="layout:XML_Contacts"/>
                 </page>
                 <page layout="hbox" gravity="center">
-                  <text text="cmd4"/>
-                </page>
-                <page layout="hbox" gravity="center">
-                  <text text="cmd5"/>
+                  <include src="layout:XML_Backup_Restore"/>
                 </page>
               </tabctrl>
             </page>
@@ -48,11 +58,11 @@
         </tabctrltemplate>
       </window>
     </page>
-    <page layout="vbox" gravity="center" colorText="@color/gray" colorBkgnd="@color/white" clipClient="1">
-      <window weight="1"/>
+    <page size="-2,-2" layout="vbox" gravity="center" colorText="@color/gray" colorBkgnd="@color/white" clipClient="1">
+      <window weight="2"/>
       <img skin="skin_connect_dev"/>
-      <text name="Txt_Tip" font="adding:12" text="欢迎使用爱豆助手，请用数据线将苹果设备连接到电脑"/>
-      <text extend_top="20" font="adding:6" text="绿色！安全！"/>
+      <text name="Txt_Tip" font="adding:12" text="欢迎使用易点手机助手，请用数据线将苹果设备连接到电脑"/>
+      <text extend_top="20" font="adding:6" text="纯净！安全！"/>
       <text extend_top="8" text="管理您的苹果设备更轻松"/>
       <window weight="1"/>
       <img skin="skin_pro_pc_apps"/>
