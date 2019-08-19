@@ -1,15 +1,15 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "SShellNofityHwnd2.h"
 
 namespace SOUI
 {
 	CShellNotifyHwnd2::CShellNotifyHwnd2(SHostWnd * pMainWnd, SShellNotifyIcon* shellnotifyicon) :m_pMainWnd(pMainWnd),m_ShellNotifyIcon(shellnotifyicon)
 	{
-		MsgTaskbarCreated = RegisterWindowMessage(L"TaskbarCreated");
-		Create(L"shell_nofity_msg_windows", 0, 0, 0, 0, 0, 0, HWND_MESSAGE, nullptr);
+		MsgTaskbarCreated = RegisterWindowMessage(_T("TaskbarCreated"));
+		Create(_T("shell_nofity_msg_windows"), 0, 0, 0, 0, 0, 0, HWND_MESSAGE, nullptr);
 	}
 
-	//ÍĞÅÌÍ¨ÖªÏûÏ¢´¦Àíº¯Êı
+	//æ‰˜ç›˜é€šçŸ¥æ¶ˆæ¯å¤„ç†å‡½æ•°
 
 	LRESULT CShellNotifyHwnd2::OnIconNotify(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL)
 	{
