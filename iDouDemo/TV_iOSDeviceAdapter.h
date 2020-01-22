@@ -216,7 +216,7 @@ protected:
 			item.nCmd = i;
 			InsertItem(item, hRoot);
 		}
-		notifyBranchInvalidated(ITEM_ROOT);
+		notifyBranchChanged(ITEM_ROOT);
 	}
 	void SetDevCan(LPCSTR id, bool can = true)
 	{
@@ -229,7 +229,7 @@ protected:
 				if (ii.data.bCan != can)
 				{
 					ii.data.bCan = can;
-					notifyBranchInvalidated(node);
+					notifyBranchChanged(node);
 				}
 				break;
 			}
@@ -244,7 +244,7 @@ protected:
 			if (m_tree.GetItem(node).data.guid == id)
 			{
 				m_tree.DeleteItem(node);
-				notifyBranchInvalidated(ITEM_ROOT);
+				notifyBranchChanged(ITEM_ROOT);
 				break;
 			}
 			node = m_tree.GetNextSiblingItem(node);

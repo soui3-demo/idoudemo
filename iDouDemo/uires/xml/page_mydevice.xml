@@ -2,7 +2,7 @@
   <tabctrl name="tab_dev_info" size="-2,-2" tabHeight="0" animateSteps="0" curSel="1">
     <page>
       <window size="-2,-2" layout="hbox">
-        <treeview size="190,-2" name="tv_ios" indent="0">
+        <treeview size="190,-2" name="tv_ios" indent="0" colorBkgnd="#cccccc">
           <template>
             <item_group focusable="0" layout="vbox" size="-2,36"  colorHover="@color/gray3">
               <window size="-2,0" layout="hbox" weight="1" gravity="center">
